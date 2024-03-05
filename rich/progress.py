@@ -44,7 +44,7 @@ from .console import Console, Group, JustifyMethod, RenderableType
 from .highlighter import Highlighter
 from .jupyter import JupyterMixin
 from .live import Live
-from .progress_bar import ProgressBar
+from .progress_bar import BarStyleMixin, PredefinedStyles, ProgressBar
 from .spinner import Spinner
 from .style import StyleType
 from .table import Column, Table
@@ -649,6 +649,7 @@ class BarColumn(ProgressColumn):
         complete_style: StyleType = "bar.complete",
         finished_style: StyleType = "bar.finished",
         pulse_style: StyleType = "bar.pulse",
+        bar_style: BarStyleMixin = PredefinedStyles.BAR,
         table_column: Optional[Column] = None,
     ) -> None:
         self.bar_width = bar_width
