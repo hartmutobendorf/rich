@@ -57,7 +57,7 @@ class ProgressBar(JupyterMixin):
         complete_style: StyleType = "bar.complete",
         finished_style: StyleType = "bar.finished",
         pulse_style: StyleType = "bar.pulse",
-        bar_viz: BarStyleMixin = None,
+        bar_style: BarStyleMixin = None,
         animation_time: Optional[float] = None,
     ):
         self.total = total
@@ -70,7 +70,7 @@ class ProgressBar(JupyterMixin):
         self.pulse_style = pulse_style
         self.animation_time = animation_time
         
-        bar_viz = bar_viz if bar_viz is not None else PredefinedStyles.GAP
+        bar_viz = bar_style if bar_style is not None else PredefinedStyles.GAP
         self.bar = bar_viz.bar
         self.half_bar_right = bar_viz.half_bar_right 
         self.bg_half_bar_left = bar_viz.bg_half_bar_left
