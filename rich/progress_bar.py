@@ -26,11 +26,11 @@ class BarStyleMixin:
 class PredefinedStyles(BarStyleMixin, Enum):
     ASCII        = "-", " ", "-", " "
     FINE         = "—", " ", "—", " "
-    GAP          = "━", "╺", "━", "╸"
+    GAP          = "━", "╸", "━", "╺"
     BLOCK        = "∎", "∎", "━", "∎"
     BLOCK_FINE   = "∎", "∎", "—", "∎"
     BLOCK_DOTTED = "∎", "∎", "-", "∎"
-    SOLID_GAP    = "█", "▐", " ", "▌"
+    SOLID_GAP    = "█", "▌", " ", "▐"
     SOLID        = "█", "█", " ", "█"
 
 class ProgressBar(JupyterMixin):
