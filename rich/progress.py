@@ -649,7 +649,7 @@ class BarColumn(ProgressColumn):
         complete_style: StyleType = "bar.complete",
         finished_style: StyleType = "bar.finished",
         pulse_style: StyleType = "bar.pulse",
-        bar_style: BarStyleMixin = PredefinedStyles.BAR,
+        bar_style: BarStyleMixin = None,
         table_column: Optional[Column] = None,
     ) -> None:
         self.bar_width = bar_width
@@ -657,6 +657,7 @@ class BarColumn(ProgressColumn):
         self.complete_style = complete_style
         self.finished_style = finished_style
         self.pulse_style = pulse_style
+        this.bar_style = bar_style
         super().__init__(table_column=table_column)
 
     def render(self, task: "Task") -> ProgressBar:
@@ -671,6 +672,7 @@ class BarColumn(ProgressColumn):
             complete_style=self.complete_style,
             finished_style=self.finished_style,
             pulse_style=self.pulse_style,
+            bar_style=self.bar_style if self.bar_style
         )
 
 
