@@ -25,6 +25,7 @@ class BarStyleMixin:
 
 class PredefinedStyles(BarStyleMixin, Enum):
     ASCII        = "-", " ", "-", " "
+    FINE         = "—", " ", "—", " "
     GAP          = "━", "╺", "━", "╸"
     BLOCK        = "∎", "∎", "━", "∎"
     BLOCK_FINE   = "∎", "∎", "—", "∎"
