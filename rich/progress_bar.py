@@ -57,7 +57,7 @@ class ProgressBar(JupyterMixin):
         complete_style: StyleType = "bar.complete",
         finished_style: StyleType = "bar.finished",
         pulse_style: StyleType = "bar.pulse",
-        bar_viz: VizDataType = PredefinedStyles.GAP,
+        bar_viz: BarStyleMixin = PredefinedStyles.GAP,
         animation_time: Optional[float] = None,
     ):
         self.total = total
